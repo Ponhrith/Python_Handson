@@ -20,17 +20,29 @@
 
 #-----------Exercise-----------#
 
-class Dog:
-    def __inint__(self, breed):
-        self.breed = breed
+# class Dog:
+#     def __inint__(self, breed):
+#         self.breed = breed
     
-    def bark(self):
-        print("Bark")
+#     def bark(self):
+#         print("Bark")
         
-    def introduction(self):
-        print(f"This is a {self.breed}")
+#     def introduction(self):
+#         print(f"This is a {self.breed}")
         
-dog = Dog("German Shepherd")
-dog.introduction()
-dog2 = Dog("BullDog")
-dog2.introduction()
+# dog = Dog("German Shepherd")
+# dog.introduction()
+# dog2 = Dog("BullDog")
+# dog2.introduction()
+
+#---------------Magic/Dunder Methods---------------#
+
+class MagicMethods:
+    x = 5 + 3
+    y = (5).__add__(3)
+    name1 = "John Shelby".__repr__()
+    name2 = "Finn Shelby"
+    print(name1)
+    print(name2)
+    
+MagicMethods()
