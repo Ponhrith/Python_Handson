@@ -37,12 +37,30 @@
 
 #---------------Magic/Dunder Methods---------------#
 
-class MagicMethods:
-    x = 5 + 3
-    y = (5).__add__(3)
-    name1 = "John Shelby".__repr__()
-    name2 = "Finn Shelby"
-    print(name1)
-    print(name2)
+# class MagicMethods:
+#     x = 5 + 3
+#     y = (5).__add__(3)
+#     name1 = "John Shelby".__repr__()
+#     name2 = "Finn Shelby"
+#     print(name1)
+#     print(name2)
     
-MagicMethods()
+# MagicMethods()
+
+#---------------Inheritence---------------#
+
+class Bird:
+    def fly(self):
+        print("Fly")
+        
+class Parrot(Bird):
+    def chirp(self):
+        print("Chirp")
+
+class Sparrow(Bird):
+    def preening(self):
+        print("Preening")
+
+parrot = Parrot()
+sparrow = Sparrow()
+sparrow.preening()
