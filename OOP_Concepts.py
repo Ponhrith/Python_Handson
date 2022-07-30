@@ -49,18 +49,43 @@
 
 #---------------Inheritence---------------#
 
-class Bird:
-    def fly(self):
-        print("Fly")
+# class Bird:
+#     def fly(self):
+#         print("Fly")
         
-class Parrot(Bird):
-    def chirp(self):
-        print("Chirp")
+# class Parrot(Bird):
+#     def chirp(self):
+#         print("Chirp")
 
-class Sparrow(Bird):
-    def preening(self):
-        print("Preening")
+# class Sparrow(Bird):
+#     def preening(self):
+#         print("Preening")
 
-parrot = Parrot()
-sparrow = Sparrow()
-sparrow.preening()
+# parrot = Parrot()
+# sparrow = Sparrow()
+# sparrow.preening()
+
+#--------------Polymorphism---------------#
+
+class Laptop:
+    def type(self):
+        print("Computer")
+    def color(self):
+        print("Grey")
+        
+class Calculator:
+    def type(self):
+        print("Computer")
+        
+    def color(self):
+        print("Black")
+        
+def computer(obj):
+    obj.type()
+    obj.color()
+    
+laptop = Laptop()
+calculator = Calculator()
+
+computer(laptop)
+computer(calculator)  
