@@ -27,6 +27,10 @@ class Dog:
     def bark(self):
         print("Bark")
         
+    def introduction(self):
+        print(f"This is a {self.breed}")
+        
 dog = Dog("German Shepherd")
-print(dog.breed)
-dog.bark()
+dog.introduction()
+dog2 = Dog("BullDog")
+dog2.introduction()
