@@ -17,5 +17,9 @@ for row in range(2, sheet.max_row + 1):
     total_marks_cell = sheet.cell(row, 9)
     total_marks_cell.value = total_marks
     
+    total_percentages = round(total_marks / 6)
+    total_percentages_cell = sheet.cell(row, 10)
+    total_percentages_cell.value = total_percentages
+    
 workbook.save("students-result-final.xlsx")
 print("Document Saved Successfully")
