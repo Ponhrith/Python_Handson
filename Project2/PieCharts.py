@@ -7,6 +7,7 @@ colors = ["g", "orange", "b", "r", "golde"]
 plt.pie(population, labels=continents, autopct="%1.1f%%", explode = explode, colors = colors) #f = fraction, 1.1 = 1 digit, %% percent 
 #plt.pie(population, labels=continents, autopct="%1.1f%%", startangle=45) #change position
 plt.legend(continents)
+plt.title("World Population by Continents")
 plt.axis("equal") #aligned
 plt.show()
 
