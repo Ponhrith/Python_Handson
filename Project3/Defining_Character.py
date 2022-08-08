@@ -34,12 +34,19 @@ class Password:
         symbols = ch._symbols()
         characters = [capital_letters, small_letters, numbers, symbols]
         password = ""
-        for length in range(0, 7):
+        length = range(int(input("How long should the password be?")))
+        for length in length:
             index1 = int(random.unifomr(0,4))
             index2 = int(random.unifomrm(0, 26))
             character = characters[index1][index2]
             password += str(character)
         return password
     
-password = Password()
-print(password.generating_password())
+    
+def main():
+    ps = Password()
+    password = ps.generating_password()
+    print(f"Password: {password}")
+    return password
+
+main()
