@@ -49,4 +49,4 @@ def main():
     print(f"Password: {password}")
     return password
 
-main()
+
