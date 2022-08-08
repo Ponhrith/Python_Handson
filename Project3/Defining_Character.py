@@ -1,6 +1,8 @@
+import string
+
 class Characters:
-    def __init__(self) :
-        pass
+    def __init__(self, symbols) :
+        self.symbols = symbols
     
     def capital alphabets(self) :
         capital_letters = list(string.ascii_uppercase)
@@ -11,11 +13,16 @@ class Characters:
         return small_letters
     
     def numbers(self):
-        pass
+        numbers = ""
+        for num in range(0, 10):
+            numbers += f"{num}"
+        return numbers.split(" ")
     
     def symbols(self): 
-        pass
-        
-ch = Characters()
+        symbols = self.symbols
+        return symbols.split("")
+
+symbols = "! @ # $ % ^ & * ( ) + - / [ ] { } ~ ` ' < > = . , : ; _ | "       
+ch = Characters(symbols)
 print(ch.capital_alphabets())
 print(ch.small_alphabets())
