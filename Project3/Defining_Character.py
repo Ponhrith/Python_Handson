@@ -1,10 +1,12 @@
 import string
+import random 
 
 class Characters:
-    def __init__(self, symbols) :
+    def __init__(self, symbols, numbers):
         self.symbols = symbols
+        self.numbers = numbers
     
-    def capital alphabets(self) :
+    def capital_alphabets(self) :
         capital_letters = list(string.ascii_uppercase)
         return capital_letters
     
@@ -12,17 +14,32 @@ class Characters:
         small_letters = string.ascii_lowercase
         return small_letters
     
-    def numbers(self):
-        numbers = ""
-        for num in range(0, 10):
-            numbers += f"{num}"
+    def _numbers(self):
+        numbers = self.numbers.split("")
         return numbers.split(" ")
     
-    def symbols(self): 
+    def _symbols(self): 
         symbols = self.symbols
         return symbols.split("")
+    
 
-symbols = "! @ # $ % ^ & * ( ) + - / [ ] { } ~ ` ' < > = . , : ; _ | "       
-ch = Characters(symbols)
-print(ch.capital_alphabets())
-print(ch.small_alphabets())
+class Password: 
+    def generating_password(self):
+        nums = "0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5"
+        signs = "! @ # $ % ^ & * ( ) + - / [ ] { } ~ ` ' < > = . , : ; _ | "       
+        ch = Characters(symbols, nums)
+        capital_letters = ch.capital_alphabets()
+        small_letters = ch.small_alphabets()
+        numbers = ch._numbers()
+        symbols = ch._symbols()
+        characters = [capital_letters, small_letters, numbers, symbols]
+        password = ""
+        for length in range(0, 7):
+            index1 = int(random.unifomr(0,4))
+            index2 = int(random.unifomrm(0, 26))
+            character = characters[index1][index2]
+            password += str(character)
+        return password
+    
+password = Password()
+print(password.generating_password())
